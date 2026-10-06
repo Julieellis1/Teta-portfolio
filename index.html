@@ -1,261 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adebiyi Thompson — Web Designer</title>
-  <meta name="description" content="Adebiyi Thompson — Web designer specializing in web design, branding and ideation." />
-
-  <!-- Fonts: Syne (display) + Inter (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- GSAP + ScrollTrigger via CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adebiyi Thompson: Web Designer | Teta Digitals</title>
+<meta name="description" content="Adebiyi Thompson designs and builds cinematic, mobile-first websites, brands and SEO growth engines for clients worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="preloader"><div class="pl-mark">TETA<span>.</span></div></div>
+<div id="page-veil"></div>
 
-  <!-- ============ CUSTOM CURSOR (dot + trailing ring) ============ -->
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursorRing" aria-hidden="true"><span id="cursorLabel">View</span></div>
+<nav class="pill-nav">
+<span class="brand-dot">TETA<span>.</span></span>
+<a class="nl" href="#work">Work</a>
+<a class="nl" href="#services">Services</a>
+<a class="nl" href="#about">About</a>
+<a class="nl" href="#contact">Contact</a>
+<button class="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<button class="mclose" aria-label="Close menu">&times;</button>
+<a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+</div>
 
-  <!-- ============ PRELOADER ============ -->
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader-inner">
-      <p class="preloader-eyebrow">Portfolio © 2026</p>
-      <h1 class="preloader-name" id="preloaderName">
-        <span>ADEBIYI</span>
-        <span>THOMPSON</span>
-      </h1>
-      <div class="preloader-bar"><span id="preloaderBarFill"></span></div>
-      <p class="preloader-count"><span id="preloaderCount">0</span>%</p>
-    </div>
-  </div>
+<header class="hero" id="top">
+<div class="hero-media"><img src="images/work/esriltor.jpg" alt="">
+<img src="images/work/bomorn.jpg" alt="">
+<img src="images/work/xylvar.jpg" alt="">
+<img src="images/work/litmern.jpg" alt=""></div>
+<div class="container hero-inner">
+<div class="hero-kicker"><span class="pulse"></span>Available for freelance · 2026</div>
+<h1 class="hero-title"><span class="mask"><span class="ch">A</span><span class="ch">D</span><span class="ch">E</span><span class="ch">B</span><span class="ch">I</span><span class="ch">Y</span><span class="ch">I</span></span><span class="mask outline"><span class="ch">T</span><span class="ch">H</span><span class="ch">O</span><span class="ch">M</span><span class="ch">P</span><span class="ch">S</span><span class="ch">O</span><span class="ch">N</span></span></h1>
+<div class="hero-sub">
+<p>I design and build cinematic, mobile-first websites for brands that want to be remembered · then make them rank.</p>
+<div class="hero-ctas"><a class="btn solid" href="#work">See the work</a><a class="btn ghost" href="#contact">Say hello</a></div>
+</div>
+</div>
+<div class="ticker" aria-hidden="true"><div class="track">
+<span><b>&#9679;</b> Web Design &nbsp;<b>&#9679;</b> SEO &nbsp;<b>&#9679;</b> Branding &nbsp;<b>&#9679;</b> Ideation &nbsp;</span>
+<span><b>&#9679;</b> Web Design &nbsp;<b>&#9679;</b> SEO &nbsp;<b>&#9679;</b> Branding &nbsp;<b>&#9679;</b> Ideation &nbsp;</span>
+</div></div>
+</header>
 
-  <!-- ============ GRAIN OVERLAY ============ -->
-  <div class="grain" aria-hidden="true"></div>
+<section class="section" id="about"><div class="container">
+<span class="eyebrow rv">About</span>
+<p class="intro-text" data-char-hl>I design and build websites that win clients, rank on Google, and look like a million dollars.</p>
+<p class="intro-sub rv">I&rsquo;m Adebiyi Thompson, a web designer in Lagos working with clients worldwide. My work is minimal on the surface and meticulous underneath: fast pages, clear messages, and designs that give small businesses the presence of much larger ones.</p>
+</div></section>
 
-  <!-- ============ NAV ============ -->
-  <header class="nav" id="siteNav">
-    <a href="#top" class="nav-logo magnetic" data-hover>AT<span class="dot-accent">.</span></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#work" data-hover>Work</a>
-      <a href="#services" data-hover>Services</a>
-      <a href="#about" data-hover>About</a>
-      <a href="#process" data-hover>Process</a>
-      <a href="#contact" data-hover class="nav-cta">Let's talk</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </header>
+<section class="section cube-sec" id="services"><div class="container">
+<span class="eyebrow rv">Services</span>
+<h2 class="sec-title rv">Four disciplines, <span class="accent">one standard.</span></h2>
+</div>
+<div class="cube-pin">
+<div class="cube-stage"><div class="cube"><div class="face" style="transform:rotateY(0deg) translateZ(280px)"><div>
+<span class="fn">01 / Service</span><h3>Web Design</h3><p>Custom, mobile-first websites designed to convert visitors into customers. No templates, no page builders, just fast hand-built pages.</p></div></div>
+<div class="face" style="transform:rotateY(90deg) translateZ(280px)"><div>
+<span class="fn">02 / Service</span><h3>SEO</h3><p>Technical audits, on-page fixes and monthly retainers backed by live SERP data. Plain-English reporting, no vanity metrics.</p></div></div>
+<div class="face" style="transform:rotateY(180deg) translateZ(280px)"><div>
+<span class="fn">03 / Service</span><h3>Branding</h3><p>Identities with a point of view. Logos, color systems and art direction that make small businesses look established.</p></div></div>
+<div class="face" style="transform:rotateY(-90deg) translateZ(280px)"><div>
+<span class="fn">04 / Service</span><h3>Ideation</h3><p>Naming, concepts and creative direction. The thinking before the pixels, so the pixels have something to say.</p></div></div></div></div>
+<div class="cube-hint">Scroll to rotate</div>
+</div>
+<div class="container"><div class="svc-fallback"><div class="svc-card rv"><span class="fn">01</span><h3>Web Design</h3><p>Custom, mobile-first websites designed to convert visitors into customers. No templates, no page builders, just fast hand-built pages.</p></div>
+<div class="svc-card rv"><span class="fn">02</span><h3>SEO</h3><p>Technical audits, on-page fixes and monthly retainers backed by live SERP data. Plain-English reporting, no vanity metrics.</p></div>
+<div class="svc-card rv"><span class="fn">03</span><h3>Branding</h3><p>Identities with a point of view. Logos, color systems and art direction that make small businesses look established.</p></div>
+<div class="svc-card rv"><span class="fn">04</span><h3>Ideation</h3><p>Naming, concepts and creative direction. The thinking before the pixels, so the pixels have something to say.</p></div></div></div>
+</section>
 
-  <main id="top">
+<section class="section" id="work"><div class="container">
+<span class="eyebrow rv">Selected Work</span>
+<h2 class="sec-title rv">Work that <span class="accent">speaks</span> quietly, but lands loudly.</h2>
+</div>
+<div class="work-marquee" aria-hidden="true"><div class="track">
+<span>Selected Work · Selected Work · Selected Work ·&nbsp;</span>
+<span>Selected Work · Selected Work · Selected Work ·&nbsp;</span>
+</div></div>
+<div class="container" style="margin-top:2rem"><a class="work-row" href="https://xylvar.pages.dev" target="_blank" rel="noopener" data-img="images/work/xylvar.jpg">
+<span class="wn">/01</span><h3>xylvar</h3><span class="wcat">SEO Agency Website &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://movaldem.teta.dpdns.org" target="_blank" rel="noopener" data-img="images/work/movaldem.jpg">
+<span class="wn">/02</span><h3>Movaldem Church Platform</h3><span class="wcat">Church Platform &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://julieellis1.github.io/portfolio-demos/esriltor/" target="_blank" rel="noopener" data-img="images/work/esriltor.jpg">
+<span class="wn">/03</span><h3>Esriltor</h3><span class="wcat">Estate Agency &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://julieellis1.github.io/portfolio-demos/premier-hvac/" target="_blank" rel="noopener" data-img="images/work/hvac.jpg">
+<span class="wn">/04</span><h3>Premier HVAC</h3><span class="wcat">HVAC Company &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://julieellis1.github.io/portfolio-demos/bomorn-haven/" target="_blank" rel="noopener" data-img="images/work/bomorn.jpg">
+<span class="wn">/05</span><h3>Bomorn Haven</h3><span class="wcat">Restaurant &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://zoesmile.teta.dpdns.org" target="_blank" rel="noopener" data-img="images/work/zoesmile.jpg">
+<span class="wn">/06</span><h3>ZoeSmile Dental</h3><span class="wcat">Dental Clinic &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://julieellis1.github.io/portfolio-demos/litmern-consults/" target="_blank" rel="noopener" data-img="images/work/litmern.jpg">
+<span class="wn">/07</span><h3>Litmern Consults</h3><span class="wcat">Consulting Firm &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://test.teta.dpdns.org" target="_blank" rel="noopener" data-img="images/work/sag.jpg">
+<span class="wn">/08</span><h3>SAG Ministry</h3><span class="wcat">Ministry Website &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://marksheet.top" target="_blank" rel="noopener" data-img="images/work/marksheet.jpg">
+<span class="wn">/09</span><h3>Marksheet</h3><span class="wcat">School Platform &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<a class="work-row" href="https://omh.teta.dpdns.org" target="_blank" rel="noopener" data-img="images/work/clinic.jpg">
+<span class="wn">/10</span><h3>Clinic Staff App</h3><span class="wcat">Hospital Web App &middot; 2026</span><span class="warrow">&rarr;</span></a>
+<div class="work-row soon"><span class="wn">/11</span><h3>E-commerce Demo</h3><span class="wcat">Coming soon</span><span class="warrow">&#9679;</span></div></div>
+</section>
+<div id="hover-preview"><img src="" alt=""></div>
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <!-- animated gradient blobs -->
-      <div class="hero-bg" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-      </div>
+<section class="section stats"><div class="container">
+<div class="stat-grid">
+<div class="stat rv"><b data-count="10">0</b><span>Live projects shipped</span></div>
+<div class="stat rv"><b data-count="65">0<span class="suffix">+</span></b><span>Pages designed and built</span></div>
+<div class="stat rv"><b data-count="9">0</b><span>Industries covered</span></div>
+<div class="stat rv"><b data-count="4">0</b><span>Core services</span></div>
+</div></div></section>
 
-      <div class="hero-inner">
-        <p class="hero-eyebrow reveal">Available for freelance — 2026</p>
-        <h1 class="hero-title">
-          <span class="line"><span class="line-inner">ADEBIYI</span></span>
-          <span class="line"><span class="line-inner outline">THOMPSON</span></span>
-        </h1>
-        <div class="hero-row">
-          <p class="hero-subtitle reveal">Web Designer <em>—</em> Branding <em>—</em> Ideation</p>
-          <p class="hero-desc reveal">I design minimal, cinematic websites and identities for brands that want to be remembered.</p>
-        </div>
-      </div>
+<section class="section"><div class="container">
+<span class="eyebrow rv">Process</span>
+<h2 class="sec-title rv">From first call to <span class="accent">launch day.</span></h2>
+<div class="steps">
+<div class="step rv"><div class="num">01</div><h3>Discover</h3><p>We talk through your goals, audience and what success looks like. You get a fixed scope and price in writing.</p></div>
+<div class="step rv"><div class="num">02</div><h3>Design</h3><p>Concepts become layouts. You review real designs, not wireframe promises, with two revision rounds.</p></div>
+<div class="step rv"><div class="num">03</div><h3>Build</h3><p>Hand-built, mobile-first pages with clean code, fast loads and on-page SEO baked in from day one.</p></div>
+<div class="step rv"><div class="num">04</div><h3>Launch &amp; Support</h3><p>Tested on desktop and mobile, deployed, and measured. Then optional SEO retainers keep it climbing.</p></div>
+</div></div></section>
 
-      <a href="#work" class="scroll-indicator magnetic" data-hover aria-label="Scroll to work">
-        <span class="scroll-text">Scroll</span>
-        <span class="scroll-line"><span></span></span>
-      </a>
-    </section>
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="container">
+<span class="eyebrow rv">FAQ</span>
+<h2 class="sec-title rv">Straight <span class="accent">answers.</span></h2>
+<div class="accordion"><div class="acc-item"><button class="acc-q">What services do you offer?<span class="plus">+</span></button><div class="acc-a"><p>Web design and development, SEO (audits and monthly retainers), branding, and ideation. Most clients come for a website and stay for the growth work.</p></div></div>
+<div class="acc-item"><button class="acc-q">How much does a website cost?<span class="plus">+</span></button><div class="acc-a"><p>Every project is scoped in writing before work starts, so you get a fixed quote, not a surprise. Tell me about your project and I will price it plainly.</p></div></div>
+<div class="acc-item"><button class="acc-q">How long does a typical build take?<span class="plus">+</span></button><div class="acc-a"><p>A focused business site usually ships in two to four weeks. Larger platforms are broken into milestones with something live at each step.</p></div></div>
+<div class="acc-item"><button class="acc-q">Do you only build websites?<span class="plus">+</span></button><div class="acc-a"><p>No. I also ship web apps and Android apps from the same codebase, and run SEO retainers with monthly reporting.</p></div></div>
+<div class="acc-item"><button class="acc-q">Will my site work well on phones?<span class="plus">+</span></button><div class="acc-a"><p>Every build is mobile-first and tested on desktop and mobile before it ships. Most of your visitors will meet you on a phone.</p></div></div>
+<div class="acc-item"><button class="acc-q">How do we start?<span class="plus">+</span></button><div class="acc-a"><p>Send a message about your project. You will get a straight answer on fit, scope and price, and if I cannot move your needle I will tell you before you pay.</p></div></div></div>
+</div></section>
 
-    <!-- ============ MARQUEE DIVIDER ============ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Web Design — Branding — Ideation —&nbsp;</span>
-        <span>Web Design — Branding — Ideation —&nbsp;</span>
-      </div>
-    </div>
+<section class="section cta" id="contact"><div class="container">
+<div class="cta-wave" data-wave>LET'S BUILD</div>
+<p class="rv">Have a project in mind? Tell me about it and you will get a straight answer on fit, scope and price.</p>
+<div class="rv" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+<a class="btn solid" href="mailto:hello@adebiyithompson.com">Say hello</a>
+<a class="btn ghost" href="#work">Browse the work</a>
+</div></div></section>
 
-    <!-- ============ SELECTED WORK ============ -->
-    <section class="section work" id="work">
-      <div class="section-head reveal">
-        <p class="section-index">01 / Selected Work</p>
-        <h2 class="section-title">Work that <span class="accent">speaks</span> quietly, but lands loudly.</h2>
-      </div>
+<footer><div class="container">
+<div class="foot-grid">
+<div><div class="foot-brand">TETA<span>.</span></div>
+<p style="color:var(--muted);font-size:.93rem;max-width:300px;margin-top:1rem">Cinematic websites, brands and SEO for clients worldwide. Designed and built by Adebiyi Thompson.</p></div>
+<div><h5>Menu</h5><ul><li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+<div><h5>Services</h5><ul><li>Web Design</li><li>SEO</li><li>Branding</li><li>Ideation</li></ul></div>
+<div><h5>Contact</h5><ul><li><a href="mailto:hello@adebiyithompson.com">hello@adebiyithompson.com</a></li><li>Lagos, Nigeria</li><li>Worldwide, remote</li></ul></div>
+</div>
+<div class="foot-bottom">
+<span>&copy; <span class="js-year">2026</span> Teta Digitals. All rights reserved.</span>
+<span><a href="#top" onclick="window.__tetaScrollTo&&window.__tetaScrollTo('#top');return false;">Back to top &uarr;</a></span>
+</div></div></footer>
 
-      <div class="work-grid">
-        <!-- Each card: pure CSS gradient art, hover reveals title, click opens overlay -->
-        <article class="work-card reveal" data-hover data-project="nova" tabindex="0" role="button" aria-label="Open Nova Studio case study">
-          <div class="work-art art-nova"><span class="work-num">01</span><div class="work-orb"></div></div>
-          <div class="work-meta"><h3>Nova Studio</h3><p>Web Design / 2025</p></div>
-        </article>
-        <article class="work-card reveal" data-hover data-project="kaffa" tabindex="0" role="button" aria-label="Open Kaffa case study">
-          <div class="work-art art-kaffa"><span class="work-num">02</span><div class="work-orb"></div></div>
-          <div class="work-meta"><h3>Kaffa Roasters</h3><p>Branding / 2025</p></div>
-        </article>
-        <article class="work-card reveal" data-hover data-project="pulse" tabindex="0" role="button" aria-label="Open Pulse case study">
-          <div class="work-art art-pulse"><span class="work-num">03</span><div class="work-orb"></div></div>
-          <div class="work-meta"><h3>Pulse Fitness</h3><p>Web Design / 2024</p></div>
-        </article>
-        <article class="work-card reveal" data-hover data-project="atelier" tabindex="0" role="button" aria-label="Open Atelier case study">
-          <div class="work-art art-atelier"><span class="work-num">04</span><div class="work-orb"></div></div>
-          <div class="work-meta"><h3>Atelier Noir</h3><p>Branding + Web / 2024</p></div>
-        </article>
-        <article class="work-card reveal" data-hover data-project="waveform" tabindex="0" role="button" aria-label="Open Waveform case study">
-          <div class="work-art art-waveform"><span class="work-num">05</span><div class="work-orb"></div></div>
-          <div class="work-meta"><h3>Waveform</h3><p>Ideation / 2024</p></div>
-        </article>
-        <article class="work-card reveal" data-hover data-project="velvet" tabindex="0" role="button" aria-label="Open Velvet case study">
-          <div class="work-art art-velvet"><span class="work-num">06</span><div class="work-orb"></div></div>
-          <div class="work-meta"><h3>Velvet & Co.</h3><p>Web Design / 2023</p></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ SERVICES ============ -->
-    <section class="section services" id="services">
-      <div class="section-head reveal">
-        <p class="section-index">02 / Services</p>
-        <h2 class="section-title">Three ways I can help you <span class="accent">win.</span></h2>
-      </div>
-      <div class="services-grid">
-        <article class="service-card reveal" data-hover>
-          <p class="service-num">01</p>
-          <h3>Web Design</h3>
-          <p class="service-desc">Cinematic, conversion-focused websites — from striking landing pages to full marketing sites.</p>
-          <ul class="service-list">
-            <li>Landing pages</li>
-            <li>Portfolio & marketing sites</li>
-            <li>Design systems + handoff</li>
-          </ul>
-        </article>
-        <article class="service-card reveal" data-hover>
-          <p class="service-num">02</p>
-          <h3>Branding</h3>
-          <p class="service-desc">Minimal identities with a point of view — logos, type and color that feel inevitable.</p>
-          <ul class="service-list">
-            <li>Logo & visual identity</li>
-            <li>Typography & color</li>
-            <li>Brand guidelines</li>
-          </ul>
-        </article>
-        <article class="service-card reveal" data-hover>
-          <p class="service-num">03</p>
-          <h3>Ideation</h3>
-          <p class="service-desc">Workshops and concepts that turn fuzzy ideas into a sharp creative direction.</p>
-          <ul class="service-list">
-            <li>Creative direction</li>
-            <li>Moodboards & concepts</li>
-            <li>Naming & messaging</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="section about" id="about">
-      <div class="about-grid">
-        <div class="about-portrait reveal">
-          <!-- stylized monogram portrait placeholder -->
-          <div class="monogram" data-hover>AT</div>
-          <p class="monogram-caption">Lagos / Remote worldwide</p>
-        </div>
-        <div class="about-copy">
-          <p class="section-index reveal">03 / About</p>
-          <h2 class="section-title reveal">Designer with an obsession for <span class="accent">clarity.</span></h2>
-          <p class="about-text reveal">I'm Adebiyi Thompson, a web designer working across web design, branding and ideation. My work is minimal on the surface and meticulous underneath — generous whitespace, huge type, and motion with intent.</p>
-          <p class="about-text reveal">Over the past years I've helped startups, studios and independent brands launch sites and identities that feel premium without feeling loud.</p>
-          <div class="about-stats reveal">
-            <div><strong data-count="40">0</strong><span>Projects shipped</span></div>
-            <div><strong data-count="12">0</strong><span>Brands launched</span></div>
-            <div><strong data-count="6">0</strong><span>Years of craft</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROCESS ============ -->
-    <section class="section process" id="process">
-      <div class="section-head reveal">
-        <p class="section-index">04 / Process</p>
-        <h2 class="section-title">Simple process, <span class="accent">serious</span> outcomes.</h2>
-      </div>
-      <ol class="process-strip">
-        <li class="reveal" data-hover><span>01</span><h3>Discover</h3><p>We dig into goals, audience and what success looks like.</p></li>
-        <li class="reveal" data-hover><span>02</span><h3>Design</h3><p>Concepts, type and layout — iterated with you, fast.</p></li>
-        <li class="reveal" data-hover><span>03</span><h3>Build</h3><p>Pixel-faithful development-ready design and motion specs.</p></li>
-        <li class="reveal" data-hover><span>04</span><h3>Deliver</h3><p>Launch, guidelines and support so it stays sharp.</p></li>
-      </ol>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <p class="section-index reveal">05 / Contact</p>
-      <h2 class="contact-title reveal">Let's work<br /><span class="outline">together</span></h2>
-      <div class="contact-grid">
-        <div class="contact-left reveal">
-          <p>Have a project in mind? Tell me about it — I usually reply within 48 hours.</p>
-          <a class="btn-email magnetic" data-hover href="mailto:hello@adebiyithompson.com">hello@adebiyithompson.com</a>
-          <div class="socials">
-            <a href="#" data-hover aria-label="Twitter / X">X</a>
-            <a href="#" data-hover aria-label="Instagram">Instagram</a>
-            <a href="#" data-hover aria-label="Dribbble">Dribbble</a>
-            <a href="#" data-hover aria-label="LinkedIn">LinkedIn</a>
-          </div>
-        </div>
-        <!-- front-end only form -->
-        <form class="contact-form reveal" id="contactForm" novalidate>
-          <label> Name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-          <label> Email
-            <input type="email" name="email" placeholder="you@email.com" required />
-          </label>
-          <label> Message
-            <textarea name="message" rows="4" placeholder="Tell me about your project…" required></textarea>
-          </label>
-          <button type="submit" class="btn-submit magnetic" data-hover>Send message</button>
-          <p class="form-success" id="formSuccess" role="status" hidden>Thanks — your message is ready to send. I'll get back to you soon. ✓</p>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <p>© 2026 Adebiyi Thompson. Designed & built with intent.</p>
-    <button class="back-to-top magnetic" id="backToTop" data-hover aria-label="Back to top">↑ Top</button>
-  </footer>
-
-  <!-- ============ CASE-STUDY OVERLAY ============ -->
-  <div class="overlay" id="caseOverlay" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="overlay-backdrop" id="overlayBackdrop"></div>
-    <div class="overlay-panel" role="document">
-      <button class="overlay-close magnetic" id="overlayClose" data-hover aria-label="Close case study">✕</button>
-      <div class="overlay-art" id="overlayArt"></div>
-      <p class="section-index" id="overlayCategory">Web Design</p>
-      <h3 id="overlayTitle">Project title</h3>
-      <p id="overlayDesc">Project description.</p>
-      <ul class="overlay-tags" id="overlayTags"></ul>
-    </div>
-  </div>
-
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="site.js"></script>
 </body>
 </html>
