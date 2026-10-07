@@ -199,6 +199,7 @@ body.loaded .hero-intro{opacity:1;transform:none;transition-delay:.32s}
 .work-card a{display:block}
 .work-card a:hover .work-visual{transform:translateY(-4px)}
 .work-visual{transition:transform .35s var(--ease)}
+.work-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .center{margin-top:56px;display:flex;justify-content:center}
 
 /* ---------- statement ---------- */
